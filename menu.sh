@@ -9,7 +9,7 @@ RESULT=$(dialog --stdout --nocancel --default-item 1 --title "Afiniel Yiimp inst
 ' ' "- Do you want to install or update yiimp? -" \
 1 "Install" \
 2 "Upgrade" \
-' ' "- Daemonbuilder will download and compile you coin daemon -" \
+' ' "- Compile Coin Daemon. -" \
 3 "Daemonbuilder" \
 4 Exit)
 if [ $RESULT = ]
