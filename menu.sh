@@ -5,41 +5,52 @@
 
 source /etc/functions.sh
 
-RESULT=$(dialog --stdout --nocancel --default-item 1 --title "Afiniel Yiimp installer" --menu "Choose one" -1 60 16 \
-' ' "- Do you want to install or update yiimp? -" \
-1 "Install" \
-2 "Upgrade" \
-' ' "- Compile Coin Daemon. -" \
-3 "Daemonbuilder" \
-4 Exit)
+RESULT=$(dialog --stdout --nocancel --default-item 1 --title "Afiniel Crypto pool installer." --menu "Choose one" -1 60 16 \
+
+1 "YiiMP Single Server Good choice for beginners." \
+2 "YiiMP Multi Server More advanced options for beginners." \
+' ' "- YiiMP Upgrade -" \
+3 "YiiMP Stratum Upgrade" \
+' '  "- NOMP Server Install -" \
+4 "NOMP Server" \
+' ' "- Daemon Wallet Builder -" \
+8 "Daemonbuilder" \
+9 Exit)
 if [ $RESULT = ]
 then
 bash $(basename $0) && exit;
 fi
 
-# Single install
+
 if [ $RESULT = 1 ]
 then
 clear;
-cd $HOME/yiimpool/install
+cd $HOME/multipool/install
 source bootstrap_single.sh;
 fi
 
 if [ $RESULT = 2 ]
 then
 clear;
-cd $HOME/yiimpool/install
-source bootstrap_upgrade.sh;
+cd $HOME/multipool/install
+source bootstrap_multi.sh;
 fi
 
 if [ $RESULT = 3 ]
 then
 clear;
-cd $HOME/yiimpool/install
+cd $HOME/multipool/install
+source bootstrap_upgrade.sh;
+fi
+
+if [ $RESULT = 8 ]
+then
+clear;
+cd $HOME/multipool/install
 source bootstrap_coin.sh;
 fi
 
-if [ $RESULT = 4 ]
+if [ $RESULT = 9 ]
 then
 clear;
 exit;
