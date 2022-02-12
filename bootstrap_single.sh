@@ -16,7 +16,7 @@ if [ ! -d $HOME/yiimpool/yiimp_single ]; then
 	echo Downloading YiiMP Installer ${TAG}. . .
 	git clone \
 		-b ${TAG} --depth 1 \
-		https://github.com/afiniel/yiimp_singel-files-clearn \
+		https://github.com/afiniel/yiimpool_yiimp_single \
 		$HOME/yiimpool/yiimp_single \
 		< /dev/null 2> /dev/null
 

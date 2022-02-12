@@ -14,8 +14,8 @@ RESULT=$(dialog --stdout --nocancel --default-item 1 --title "Afiniel Crypto poo
 ' '  "- NOMP Server Install -" \
 4 "NOMP Server" \
 ' ' "- Daemon Wallet Builder -" \
-8 "Daemonbuilder" \
-9 Exit)
+5 "Daemonbuilder" \
+6 Exit)
 if [ $RESULT = ]
 then
 bash $(basename $0) && exit;
@@ -25,32 +25,39 @@ fi
 if [ $RESULT = 1 ]
 then
 clear;
-cd $HOME/multipool/install
+cd $HOME/yiimpool/install
 source bootstrap_single.sh;
 fi
 
 if [ $RESULT = 2 ]
 then
 clear;
-cd $HOME/multipool/install
+cd $HOME/yiimpool/install
 source bootstrap_multi.sh;
 fi
 
 if [ $RESULT = 3 ]
 then
 clear;
-cd $HOME/multipool/install
+cd $HOME/yiimpool/install
 source bootstrap_upgrade.sh;
 fi
 
-if [ $RESULT = 8 ]
+if [ $RESULT = 4 ]; 
 then
 clear;
-cd $HOME/multipool/install
-source bootstrap_coin.sh;
+cd $HOME/yiimpool/install
+source bootstrap_nomp.sh
 fi
 
-if [ $RESULT = 9 ]
+if [ $RESULT = 5 ]
+then
+clear;
+cd $HOME/yiimpool/install
+source bootstrap_coin.sh
+fi
+
+if [ $RESULT = 6 ]
 then
 clear;
 exit;
