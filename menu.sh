@@ -12,16 +12,10 @@ RESULT=$(dialog --stdout --nocancel --default-item 1 --title "Afiniel Crypto Ser
 ' ' "- YiiMP Upgrade -" \
 3 "YiiMP Stratum Upgrade" \
 ' '  "- NOMP Server Install -" \
-4 "NOMP Server" \
-' ' "- MPOS Server Install -" \
-5 "MPOS Server - Coming Soon" \
-' '  "- CryptoNote Server Install -" \
-6 "CryptoNote-Nodejs Server - Coming Soon" \
-' ' "- Faucet Server Install -" \
-7 "Faucet Script - Coming Soon" \
+4 "NOMP Server Comming Soon" \
 ' ' "- Daemon Wallet Builder -" \
-8 "Daemonbuilder" \
-9 Exit)
+5 "Daemonbuilder" \
+6 Exit)
 if [ $RESULT = ]
 then
 bash $(basename $0) && exit;
@@ -53,38 +47,17 @@ if [ $RESULT = 4 ]
 then
 clear;
 cd $HOME/yiimpool/install
-source bootstrap_nomp.sh;
+exit 0;
 fi
 
 if [ $RESULT = 5 ]
 then
 clear;
 cd $HOME/yiimpool/install
-exit 0;
-fi
-
-if [ $RESULT = 6 ]
-then
-clear;
-cd $HOME/yiimpool/install
-exit 0;
-fi
-
-if [ $RESULT = 7 ]
-then
-clear;
-cd $HOME/yiimpool/install
-exit 0;
-fi
-
-if [ $RESULT = 8 ]
-then
-clear;
-cd $HOME/yiimpool/install
 source bootstrap_coin.sh;
 fi
 
-if [ $RESULT = 9 ]
+if [ $RESULT = 6 ]
 then
 clear;
 exit;
