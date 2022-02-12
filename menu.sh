@@ -31,56 +31,56 @@ fi
 if [ $RESULT = 1 ]
 then
 clear;
-cd $HOME/multipool/install
+cd $HOME/yiimpool/install
 source bootstrap_single.sh;
 fi
 
 if [ $RESULT = 2 ]
 then
 clear;
-cd $HOME/multipool/install
+cd $HOME/yiimpool/install
 source bootstrap_multi.sh;
 fi
 
 if [ $RESULT = 3 ]
 then
 clear;
-cd $HOME/multipool/install
+cd $HOME/yiimpool/install
 source bootstrap_upgrade.sh;
 fi
 
 if [ $RESULT = 4 ]
 then
 clear;
-cd $HOME/multipool/install
+cd $HOME/yiimpool/install
 source bootstrap_nomp.sh;
 fi
 
 if [ $RESULT = 5 ]
 then
 clear;
-cd $HOME/multipool/install
+cd $HOME/yiimpool/install
 exit 0;
 fi
 
 if [ $RESULT = 6 ]
 then
 clear;
-cd $HOME/multipool/install
+cd $HOME/yiimpool/install
 exit 0;
 fi
 
 if [ $RESULT = 7 ]
 then
 clear;
-cd $HOME/multipool/install
+cd $HOME/yiimpool/install
 exit 0;
 fi
 
 if [ $RESULT = 8 ]
 then
 clear;
-cd $HOME/multipool/install
+cd $HOME/yiimpool/install
 source bootstrap_coin.sh;
 fi
 
