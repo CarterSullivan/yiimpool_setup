@@ -9,12 +9,12 @@ cd ~/yiimpool/install
 clear
 
 # Welcome
-message_box "Afiniel Pool installer" \
-"Hello and thanks for using the Afiniel pool installer!
+message_box "Afiniel Crypto Server Setup Installer" \
+"Hello and thanks for using the Afiniel Crypto Server Setup Installer!
 \n\nInstallation for the most part is fully automated. In most cases any user responses that are needed are asked prior to the installation.
 \n\nNOTE: You should only install this on a brand new Ubuntu 16.04 or Ubuntu 18.04 installation."
 # Root warning message box
-message_box "Afiniel Pool installer" \
+message_box "Afiniel Crypto Server Setup Installer" \
 "Naughty, naughty! You are trying to install this as the root user!
 \n\nRunning any application as root is a serious security risk.
 \n\nTherefore we make you create a user account :)"

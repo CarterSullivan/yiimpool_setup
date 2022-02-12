@@ -8,7 +8,7 @@
 #########################################################
 
 if [ -z "${TAG}" ]; then
-	TAG=v1.10
+	TAG=v1.14
 fi
 
 # Clone the yiimpool repository if it doesn't exist.
@@ -16,7 +16,7 @@ if [ ! -d $HOME/yiimpool/nomp ]; then
 	echo Downloading yiimpool NOMP Server Installer ${TAG}. . .
 	git clone \
 		-b ${TAG} --depth 1 \
-		https://github.com/afiniel/yiimpool_nomp \
+		https://github.com/Afiniel/yiimpool_nomp \
 		$HOME/yiimpool/nomp \
 		< /dev/null 2> /dev/null
 

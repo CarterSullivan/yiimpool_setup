@@ -8,12 +8,12 @@
 #########################################################
 
 if [ -z "${TAG}" ]; then
-	TAG=v3.34
+	TAG=v3.32
 fi
 
 # Clone the yiimpool repository if it doesn't exist.
 if [ ! -d $HOME/yiimpool/yiimp_single ]; then
-	echo Downloading YiiMP Installer ${TAG}. . .
+	echo Downloading yiimpool YiiMP Single Server Installer ${TAG}. . .
 	git clone \
 		-b ${TAG} --depth 1 \
 		https://github.com/afiniel/yiimpool_yiimp_single \

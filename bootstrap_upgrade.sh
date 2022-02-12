@@ -8,7 +8,7 @@
 #########################################################
 
 if [ -z "${TAG}" ]; then
-	TAG=v1.01
+	TAG=v1.08
 fi
 
 # Clone the yiimpool repository if it doesn't exist.
@@ -16,7 +16,7 @@ if [ ! -d $HOME/yiimpool/yiimp_upgrade ]; then
 	echo Downloading yiimpool YiiMP Stratum Upgrade Installer ${TAG}. . .
 	git clone \
 		-b ${TAG} --depth 1 \
-		https://github.com/afiniel/yiimpool_yiimp_upgrade \
+		https://github.com/afiniel/yiimpool_setup \
 		$HOME/yiimpool/yiimp_upgrade \
 		< /dev/null 2> /dev/null
 

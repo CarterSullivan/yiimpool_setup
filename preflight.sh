@@ -15,7 +15,7 @@ if [ $TOTAL_PHYSICAL_MEM -lt 1436000 ]; then
   if [ ! -d /vagrant ]; then
     TOTAL_PHYSICAL_MEM=$(expr \( \( $TOTAL_PHYSICAL_MEM \* 1024 \) / 1000 \) / 1000)
     echo "Your Crypto-Pool Server needs more memory (RAM) to function properly."
-    echo "Please provision a machine with at least 8 GB is recommended."
+    echo "Please provision a machine with at least 1536 GB, 6 GB recommended."
     echo "This machine has $TOTAL_PHYSICAL_MEM MB memory."
     exit
   fi
@@ -64,7 +64,7 @@ fi
 ARCHITECTURE=$(uname -m)
 if [ "$ARCHITECTURE" != "x86_64" ]; then
   if [ -z "$ARM" ]; then
-    echo "Afiniel YiiMP Server installer only supports x86_64 and will not work on any other architecture, like ARM or 32 bit OS."
+    echo "Afiniel Crypto Server Setup Installer only supports x86_64 and will not work on any other architecture, like ARM or 32 bit OS."
     echo "Your architecture is $ARCHITECTURE"
     exit
   fi
