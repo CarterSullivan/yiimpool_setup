@@ -68,6 +68,22 @@ function message_box {
 		dialog --title "$1" --msgbox "$2" 0 0
 }
 
+# Just trow in some Terminal art.      <----  FIX LATER!! ---->
+function term_art {
+
+	echo
+	echo "------------------------------------------------------------."
+    echo "██╗   ██╗██╗██╗███╗   ███╗██████╗  ██████╗  ██████╗ ██╗"     
+    echo "╚██╗ ██╔╝██║██║████╗ ████║██╔══██╗██╔═══██╗██╔═══██╗██║"
+    echo  "╚████╔╝ ██║██║██╔████╔██║██████╔╝██║   ██║██║   ██║██║"     
+    echo "  ╚██╔╝  ██║██║██║╚██╔╝██║██╔═══╝ ██║   ██║██║   ██║██║"     
+    echo  "  ██║   ██║██║██║ ╚═╝ ██║██║     ╚██████╔╝╚██████╔╝███████╗"
+    echo "   ╚═╝   ╚═╝╚═╝╚═╝     ╚═╝╚═╝      ╚═════╝  ╚═════╝ ╚══════╝"
+    echo " Yiimp Pool Installer v4.0"
+	echo "------------------------------------------------------------"
+	echo                 
+}
+
 function input_box {
 		# input_box "title" "prompt" "defaultvalue" VARIABLE
 		# The user's input will be stored in the variable VARIABLE.

@@ -31,7 +31,7 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
   # machine with enough memory?
   # If not, this shows an error and exits.
   source preflight.sh
-
+  term_art
   # Ensure Python reads/writes files in UTF-8. If the machine
   # triggers some other locale in Python, like ASCII encoding,
   # Python may not be able to read/write files. This is also
@@ -51,14 +51,14 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
   export NCURSES_NO_UTF8_ACS=1
 
   #check for user
-  echo -e " Installing needed packages for setup to continue...$COL_RESET"
+  echo -e " Installing needed packages...$COL_RESET"
   sudo apt-get -q -q update
   apt_get_quiet install dialog python3 python3-pip acl nano git apt-transport-https || exit 1
 
   # Are we running as root?
   if [[ $EUID -ne 0 ]]; then
     # Welcome
-    message_box "Afiniel Yiimpool Setup Installer" \
+    message_box "Afiniel Yiimpool Installer v4.0" \
     "Hello and thanks for using the Afiniel Yiimpool Setup Installer!
     \n\nInstallation for the most part is fully automated. In most cases any user responses that are needed are asked prior to the installation.
     \n\nNOTE: You should only install this on a brand new Ubuntu 16.04 or Ubuntu 18.04 installation."

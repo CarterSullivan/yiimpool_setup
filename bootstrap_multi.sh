@@ -16,7 +16,7 @@ if [ ! -d $HOME/yiimpool/yiimp_multi ]; then
 	echo Downloading yiimpool YiiMP Multi Server Installer ${TAG}. . .
 	git clone \
 		-b ${TAG} --depth 1 \
-		https://github.com/Kudaraidee/yiimpool_yiimp_multi \
+		https://github.com/afiniel/yiimpool_yiimp_multi \
 		$HOME/yiimpool/yiimp_multi \
 		< /dev/null 2> /dev/null
 

@@ -9,15 +9,15 @@ cd ~/yiimpool/install
 clear
 
 # Welcome
-message_box "Afiniel Yiimpool Setup Installer" \
+message_box "Afiniel Yiimpool Setup Installer v4.0" \
 "Hello and thanks for using the Afiniel Yiimpool Setup Installer!
 \n\nInstallation for the most part is fully automated. In most cases any user responses that are needed are asked prior to the installation.
 \n\nNOTE: You should only install this on a brand new Ubuntu 16.04 or Ubuntu 18.04 installation."
 # Root warning message box
 message_box "Afiniel Yiimpool Setup Installer" \
-"Naughty, naughty! You are trying to install this as the root user!
+" WARNING READ PLEASE!
 \n\nRunning any application as root is a serious security risk.
-\n\nTherefore we make you create a user account :)"
+\n\Next step you will create a new user account, name it to whatever you want"
 
 # Ask if SSH key or password user
 dialog --title "Create New User With SSH Key" \
@@ -36,8 +36,8 @@ if [[ ("$UsingSSH" == "yes") ]]; then
     if [ -z "${yiimpadmin:-}" ]; then
       DEFAULT_yiimpadmin=yiimpadmin
       input_box "New Account Name" \
-      "Please enter your desired user name.
-      \n\nUser Name:" \
+      "Please enter your new username.
+      \n\nUsername:" \
       ${DEFAULT_yiimpadmin} \
       yiimpadmin
 
@@ -49,7 +49,7 @@ if [[ ("$UsingSSH" == "yes") ]]; then
 
     if [ -z "${ssh_key:-}" ]; then
       DEFAULT_ssh_key=PublicKey
-      input_box "Please open PuTTY Key Generator on your local machine and generate a new public key." \
+      input_box "Please open PuTTY Key Generator on your local pc and generate a new public key." \
       "To paste your Public key use ctrl shift right click.
       \n\nPublic Key:" \
       ${DEFAULT_ssh_key} \
@@ -117,7 +117,7 @@ if [[ ("$UsingSSH" == "yes") ]]; then
   sudo setfacl -m u:${yiimpadmin}:rwx /home/${yiimpadmin}/yiimpool
   sudo rm -r $HOME/yiimpool
   clear
-  echo "New User is installed make sure you saved your private key..."
+  echo "New User is ready! Make sure you save your private key..."
   echo -e "$RED Please reboot system and log in as the new user and type$COL_RESET $GREEN yiimpool$COL_RESET $RED to continue setup...$COL_RESET"
   exit 0
 fi
@@ -140,7 +140,7 @@ fi
 if [ -z "${RootPassword:-}" ]; then
   DEFAULT_RootPassword=$(openssl rand -base64 8 | tr -d "=+/")
   input_box "User Password" \
-  "Enter your new user password or use this randomly system generated one.
+  "Enter your new user password or use this randomly generated one.
   \n\nUnfortunatley dialog doesnt let you copy. So you have to write it down.
   \n\nUser password:" \
   ${DEFAULT_RootPassword} \
@@ -154,8 +154,8 @@ fi
 
 clear
 
-dialog --title "Verify Your Responses" \
---yesno "Please verify your answers before you continue:
+dialog --title "Verify input" \
+--yesno "Please verify your input before you continue:
 
 New User Name : ${yiimpadmin}
 New User Pass : ${RootPassword}" 8 60
@@ -169,7 +169,7 @@ case $response in
 
 0)
 clear
-echo -e " Adding new user and password...$COL_RESET"
+echo -e " creates your new admin account...$COL_RESET"
 
 sudo adduser ${yiimpadmin} --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
 echo -e ""${RootPassword}"\n"${RootPassword}"" | passwd ${yiimpadmin}
