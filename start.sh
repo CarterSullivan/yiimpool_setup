@@ -58,8 +58,8 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
   # Are we running as root?
   if [[ $EUID -ne 0 ]]; then
     # Welcome
-    message_box "Afiniel Crypto Server Setup Installer" \
-    "Hello and thanks for using the Afiniel Crypto Server Setup Installer!
+    message_box "Afiniel Yiimpool Setup Installer" \
+    "Hello and thanks for using the Afiniel Yiimpool Setup Installer!
     \n\nInstallation for the most part is fully automated. In most cases any user responses that are needed are asked prior to the installation.
     \n\nNOTE: You should only install this on a brand new Ubuntu 16.04 or Ubuntu 18.04 installation."
   	source existing_user.sh
@@ -98,7 +98,7 @@ clear
 	echo
 	echo "-----------------------------------------------"
 	echo
-	echo Thank you for using the Afiniel Crypto Server Setup Installer!
+	echo Thank you for using the Afiniel Yiimpool Setup Installer!
 	echo
 	echo To run this installer anytime simply type, yiimpool!
 	echo Donations for continued support of this script are welcomed at:
