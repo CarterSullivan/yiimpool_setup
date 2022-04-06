@@ -6,7 +6,7 @@
 source /etc/functions.sh
 
 RESULT=$(dialog --stdout --nocancel --default-item 1 --title "Afiniel Yiimpool Installer v4.0" --menu "Choose one" -1 60 16 \
-' ' "- choose one -" \
+' ' "- What do you want to do -" \
 1 "YiiMP Install" \
 ' ' "- Compile Coin daemon -" \
 2 "DaemonBuilder" \
