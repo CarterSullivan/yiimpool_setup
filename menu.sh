@@ -11,7 +11,7 @@ RESULT=$(dialog --stdout --nocancel --default-item 1 --title "Afiniel Yiimpool I
 ' ' "- Compile Coin daemon -" \
 2 "DaemonBuilder" \
 3 "Exit Installation" \
-' '  "- YIIMP multi pool , yiimp upgrade and Nomp installer Work Inprogress -" \
+' '  "- YIIMP multi pool , yiimp upgrade and Nomp installer Work Inprogress -")
 if [ $RESULT = ]
 then
 bash $(basename $0) && exit;
